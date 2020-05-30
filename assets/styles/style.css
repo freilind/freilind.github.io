@@ -30,7 +30,7 @@ body {
     background: #334;
     color: #fff;
     transition: 0.5s;
-    padding: 20px;
+    padding: 10px;
     display: grid;
     font-size: 20px;
     place-items: center;
@@ -44,6 +44,12 @@ body {
 .container .box img {
     position: relative;
     max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.container .curso img {
+    position: relative;
+    max-width: 100%;
     margin-bottom: 10px;
 }
 
@@ -65,6 +71,11 @@ body {
 .container .box:nth-child(5){
     grid-column: span 3;
     grid-row: span 2;
+}
+
+a {
+    color: #fff;
+    text-decoration:none;
 }
 
 @media (max-width: 800px){
