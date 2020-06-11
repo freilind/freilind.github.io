@@ -21,7 +21,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: minmax(100px, auto);
-    margin: 40px;
+    margin: 20px;
     grid-auto-flow: dense;
     grid-gap: 10px;
 }
@@ -41,10 +41,21 @@ body {
     background: #e90e70
 }
 
-.container .box img {
+.container .box .content img {
     position: relative;
     max-width: 100px;
     margin-bottom: 10px;
+}
+
+.container .box .retrato img {
+    position: relative;
+    margin-bottom: 0px;
+    max-width: 200px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
 }
 
 .container .curso img {
