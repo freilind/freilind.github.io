@@ -1,4 +1,4 @@
-import { Grid, Container, Row, Spacer, Text, Link } from '@nextui-org/react'
+import { Grid, Container, Spacer, Text, Link } from '@nextui-org/react'
 import { FC } from 'react'
 import FlagImage from '../ui/flag'
 import Photo from '../ui/photo'

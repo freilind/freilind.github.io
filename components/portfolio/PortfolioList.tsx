@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import CardProject from './CardProject';
+import CardProject from './Project';
 
 interface IProject {
     url: string;
@@ -35,7 +35,7 @@ const projects: Array<IProject> = [
     }
 ];
 
-const CardPortfolioList: FC = (): any => {
+const PortfolioList: FC = (): any => {
     return (
         projects.map((project, i) => (
             <CardProject key={i} url={project.url} title={project.title} img={project.img} features={project.features} />
@@ -43,4 +43,4 @@ const CardPortfolioList: FC = (): any => {
     )
 }
 
-export default CardPortfolioList
+export default PortfolioList

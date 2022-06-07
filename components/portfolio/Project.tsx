@@ -11,7 +11,7 @@ interface Props {
 }
 
 
-const CardProject: FC<Props> = ({ url, title, img, features }) => {
+const Project: FC<Props> = ({ url, title, img, features }) => {
     return (
         <Grid>
             <NextLink href={url} passHref>
@@ -44,4 +44,4 @@ const CardProject: FC<Props> = ({ url, title, img, features }) => {
     )
 }
 
-export default CardProject;
+export default Project;

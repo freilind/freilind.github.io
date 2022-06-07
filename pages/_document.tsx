@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import Script from 'next/script'
 import { CssBaseline } from '@nextui-org/react';
 
 class MyDocument extends Document {
