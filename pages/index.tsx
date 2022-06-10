@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { PageLayout } from '../components/layouts';
 import { Grid, Row, Spacer } from '@nextui-org/react';
 import Description from '../components/perfil/Description';
-import { ListSkills } from '../components/ui/skills';
+import { ListSkills } from '../components/skills';
 import CollapsePage from '../components/collapse';
 
 const HomePage: NextPage = () => {
