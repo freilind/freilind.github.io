@@ -1,17 +1,14 @@
 import Image from 'next/Image';
 import { FC } from 'react';
+import { IFlagImage } from '../../../interfaces';
 
-interface Props {
-    country: string;
-}
-
-const FlagImage: FC<Props> = ({ country }) => {
+const FlagImage: FC<IFlagImage> = ({ country }) => {
     return (
         <Image
             className={'mt-5'}
             width={30}
             height={30}
-            src={`/icons/${country}.svg`}
+            src={`/icons/flags/${country}.svg`}
             alt="flag"
         />
     )

@@ -1,12 +1,8 @@
 import React, { FC } from 'react';
+import { IProject } from '../../interfaces';
 import CardProject from './Project';
 
-interface IProject {
-    url: string;
-    title: string;
-    img: string;
-    features: string[]
-}
+
 
 const projects: Array<IProject> = [
     {

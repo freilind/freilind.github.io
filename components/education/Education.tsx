@@ -1,19 +1,20 @@
 import React, { FC } from 'react';
-import { Grid, Table, Spacer } from '@nextui-org/react';
+import { Grid, Table } from '@nextui-org/react';
+import en from "../../lang/en.json";
+import es from "../../lang/es.json";
+import { useRouter } from 'next/router';
+import { IColumn, IItem, IMessage } from '../../interfaces';
 
-interface IColumn {
-    key: string;
-    label: string;
-}
-
-interface IItem {
-    [key: string]: string;
-    organizacion: string;
-    descripcion: string;
-    date: string;
-}
+const languages: IMessage = {
+    es,
+    en,
+};
 
 const Education: FC = () => {
+    const router = useRouter();
+    const locale = router.locale || 'es';
+    const { educationList, educationHead } = languages?.[locale];
+
     return (
         <Grid.Container gap={2} justify='center' xs={10}>
             <Table
@@ -24,12 +25,12 @@ const Education: FC = () => {
                     minWidth: "100%",
                 }}
             >
-                <Table.Header columns={columns}>
+                <Table.Header columns={educationHead}>
                     {(column: IColumn) => (
                         <Table.Column key={column.key} >{column.label}</Table.Column>
                     )}
                 </Table.Header>
-                <Table.Body items={rows}>
+                <Table.Body items={educationList}>
                     {(item: IItem) => (
                         <Table.Row key={item.key}>
                             {(columnKey: string) => (
@@ -45,38 +46,3 @@ const Education: FC = () => {
 
 export default Education;
 
-const columns = [
-    {
-        key: "organizacion",
-        label: "ORGANIZACIÓN",
-    },
-    {
-        key: "descripcion",
-        label: "DESCRIPCIÓN",
-    },
-    {
-        key: "date",
-        label: "FECHA",
-    },
-];
-
-const rows = [
-    {
-        key: "1",
-        organizacion: "ORACLE",
-        descripcion: "Oracle Certified Associate, Java SE 8 Programmer",
-        date: "2019",
-    },
-    {
-        key: "2",
-        organizacion: "UNITEC",
-        descripcion: "Diplomado BPM-SOA",
-        date: "2016",
-    },
-    {
-        key: "3",
-        organizacion: "IUGT",
-        descripcion: "Técnico Superior Universitario Informática",
-        date: "2012",
-    }
-];

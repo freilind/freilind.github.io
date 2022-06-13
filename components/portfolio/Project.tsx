@@ -2,16 +2,10 @@ import React, { FC } from 'react';
 import NextLink from 'next/link';
 import { Grid, Card, Col, Spacer, Link, Text } from '@nextui-org/react';
 import Feature from './Feature';
-
-interface Props {
-    url: string;
-    title: string;
-    img: string;
-    features: string[]
-}
+import { IProject } from '../../interfaces';
 
 
-const Project: FC<Props> = ({ url, title, img, features }) => {
+const Project: FC<IProject> = ({ url, title, img, features }) => {
     return (
         <Grid>
             <NextLink href={url} passHref>

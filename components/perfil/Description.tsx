@@ -1,9 +1,18 @@
 import { Grid, Container, Spacer, Text, Link } from '@nextui-org/react'
 import { FC } from 'react'
+import { useIntl } from 'react-intl'
 import FlagImage from '../ui/flag'
 import Photo from '../ui/photo'
 
 const Description: FC = () => {
+    const intl = useIntl();
+
+    const name = intl.formatMessage({ id: "description.name" });
+    const greeting = intl.formatMessage({ id: "description.greeting" });
+    const bodyPart1 = intl.formatMessage({ id: "description.body.part1" });
+    const bodyPart2 = intl.formatMessage({ id: "description.body.part2" });
+    const bodyPart3 = intl.formatMessage({ id: "description.body.part3" });
+
     return (
         <Grid.Container gap={1} justify="flex-start">
             <Grid xs={12} sm={3}>
@@ -13,7 +22,7 @@ const Description: FC = () => {
                 <Grid.Container >
                     <Grid xs={12} sm={9} className={'name'}>
                         <Text h2 className={'font-raleway'} transform='uppercase' >
-                            Freilin Manzano
+                            {name}
                         </Text>
                     </Grid>
                     <Grid xs={12} sm={3} className={'rrss'} >
@@ -31,12 +40,12 @@ const Description: FC = () => {
                 <Spacer />
                 <Container fluid={true}>
                     <Text size='1.3rem' className={'font-console'}>
-                        Estimado (a), ante todo un coordial saludo.  <br />
+                        {greeting} <br />
                     </Text>
                     <Text size='1.3rem' className={'font-console'}>
-                        Mi nombre es Freilin Manzano, nací en Venezuela <FlagImage country={'ve'} />  y actualmente estoy radicado en Chile <FlagImage country={'cl'} />.
-                        Me dedico al Desarrollo web, con experiencia (+8 años) y certificación Java (Java SE 8 Programmer I 1Z0-808),
-                        entusiasta por el área de front-end con React.js, Next.js, TailwindCss, Flutter.
+                        {bodyPart1} <FlagImage country={'ve'} />
+                        {bodyPart2} <FlagImage country={'cl'} />.
+                        {bodyPart3}
                     </Text>
                 </Container>
             </Grid>

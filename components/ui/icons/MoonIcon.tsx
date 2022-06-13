@@ -1,14 +1,7 @@
 import { FC } from 'react';
+import { IIcon } from '../../../interfaces';
 
-interface Props {
-    fill?: any;
-    filled?: any;
-    size?: any;
-    height?: any;
-    width?: any;
-}
-
-export const MoonIcon: FC<Props> = ({
+export const MoonIcon: FC<IIcon> = ({
     fill = "currentColor",
     filled,
     size,

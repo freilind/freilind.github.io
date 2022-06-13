@@ -1,15 +1,9 @@
 import { Card, Text, Divider, Row, Grid, Spacer } from '@nextui-org/react';
 import React, { FC } from 'react'
+import { ICompany } from '../../interfaces';
 
-interface IExprience {
-    company: string;
-    date: string;
-    description: string;
-    tech: string;
-    rol: string
-}
 
-const Experience: FC<IExprience> = ({ company, date, description, tech, rol }) => {
+const Experience: FC<ICompany> = ({ company, date, description, tech, rol }) => {
     return (
         <Grid xs={12} sm={6}>
             <Card bordered={true} css={{ mw: "400px" }}>
@@ -19,7 +13,7 @@ const Experience: FC<IExprience> = ({ company, date, description, tech, rol }) =
                             <Text h4 color='primary' transform='uppercase'>{company}</Text>
                         </Row>
                     </Grid>
-                    <Grid xs={4} justify='flex-end'>
+                    <Grid xs={4} justify='flex-end' css={{ pr: '$0', pl: '$0' }} >
                         <Row >
                             <Text small>{date}</Text>
                         </Row>

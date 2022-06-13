@@ -4,14 +4,10 @@ import { FC, PropsWithChildren } from "react";
 import SwitchTheme from "../ui/theme/SwitchTheme";
 import SwitchLanguage from '../ui/theme/SwitchLanguage';
 import Footer from "../footer";
+import { ILayout } from "../../interfaces";
 
-interface Props {
-    title: string;
-    pageDescription: string;
-    imageFullUrl?: string;
-}
 
-export const PageLayout: FC<PropsWithChildren<Props>> = ({ children, title, pageDescription, imageFullUrl }) => {
+export const PageLayout: FC<PropsWithChildren<ILayout>> = ({ children, title, pageDescription, imageFullUrl }) => {
     return (
         <>
             <Head>
