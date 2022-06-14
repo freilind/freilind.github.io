@@ -20,7 +20,7 @@ class MyDocument extends Document {
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
                     />
-                    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&family=Raleway:wght@100;300;400&display=swap" rel="stylesheet"></link>
+                    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&family=Raleway:wght@100;300;400&family=Pacifico&display=swap" rel="stylesheet"></link>
                     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
 
                     <link rel="alternate" href="/" hrefLang="x-default" />

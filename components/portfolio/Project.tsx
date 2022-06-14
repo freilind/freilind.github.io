@@ -1,36 +1,53 @@
 import React, { FC } from 'react';
 import NextLink from 'next/link';
-import { Grid, Card, Col, Spacer, Link, Text } from '@nextui-org/react';
+import { Grid, Card, Col, Spacer, Link, Text, useTheme } from '@nextui-org/react';
 import Feature from './Feature';
 import { IProject } from '../../interfaces';
 
+interface ProjectProps {
+    project: IProject;
+}
 
-const Project: FC<IProject> = ({ url, title, img, features }) => {
+const Project: FC<ProjectProps> = ({ project }) => {
+    const { isDark } = useTheme();
     return (
         <Grid>
-            <NextLink href={url} passHref>
+            <NextLink href={project.url} passHref>
                 <Link>
-                    <Card cover >
+                    <Card cover bordered >
                         <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
                             <Col>
                                 <Text h4 color='secondary'>
-                                    {title}
+                                    {project.title}
                                 </Text>
                                 <Spacer />
                                 {
-                                    features.map((f, i) => (
+                                    project.features.map((f, i) => (
                                         <Feature key={i} title={f} />
                                     ))
                                 }
 
                             </Col>
                         </Card.Header>
-                        <Card.Image
-                            src={img}
-                            height={300}
-                            width='100%'
-                            alt=''
-                        />
+
+                        {isDark &&
+                            <Card.Image
+                                src={project.imgLight}
+                                height={300}
+                                width='100%'
+                                alt=''
+                            />
+                        }
+
+                        {!isDark &&
+                            <Card.Image
+                                src={project.imgDark}
+                                height={300}
+                                width='100%'
+                                alt=''
+                            />
+                        }
+
                     </Card>
                 </Link>
             </NextLink>

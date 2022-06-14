@@ -58,6 +58,12 @@ footer {
   text-align: justify;
 }
 
+.font-pacifico {
+  font-family: 'Pacifico', cursive;
+  justify-content:center;
+  text-align: justify;
+}
+
 .name {
   padding-left: 1.3rem;
   justify-content: flex-start;

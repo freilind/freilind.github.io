@@ -1,6 +1,7 @@
 export interface IProject {
     url: string;
     title: string;
-    img: string;
+    imgLight: string;
+    imgDark: string;
     features: string[]
 }

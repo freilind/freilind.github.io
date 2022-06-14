@@ -1,40 +1,28 @@
 import React, { FC } from 'react';
 import { IProject } from '../../interfaces';
-import CardProject from './Project';
-
-
+import Project from './Project';
 
 const projects: Array<IProject> = [
     {
         url: '/portfolio/github-user-search',
         title: 'Github user search',
-        img: 'https://nextui.org/images/card-example-4.jpeg',
+        imgLight: 'https://nextui.org/images/card-example-4.jpeg',
+        imgDark: 'https://nextui.org/images/card-example-4.jpeg',
         features: ['useRef Hook', 'useState Hook']
     },
     {
-        url: '/portfolio/github-user-search',
-        title: 'Pokemón API',
-        img: 'https://nextui.org/images/card-example-4.jpeg',
-        features: ['useRef Hook', 'useState Hook']
-    },
-    {
-        url: '/portfolio/github-user-search',
-        title: 'TODO',
-        img: 'https://nextui.org/images/card-example-4.jpeg',
-        features: ['useRef Hook', 'useState Hook']
-    },
-    {
-        url: '/portfolio/github-user-search',
-        title: 'Notes',
-        img: 'https://nextui.org/images/card-example-4.jpeg',
-        features: ['useRef Hook']
+        url: '/portfolio/markdown',
+        title: '',
+        imgLight: '/images/markdown-preview-light.png',
+        imgDark: '/images/markdown-preview-dark.png',
+        features: []
     }
 ];
 
 const PortfolioList: FC = (): any => {
     return (
         projects.map((project, i) => (
-            <CardProject key={i} url={project.url} title={project.title} img={project.img} features={project.features} />
+            <Project key={i} project={project} />
         ))
     )
 }
