@@ -17,6 +17,7 @@ a {
 }
 
 main {
+  min-height: calc(100vh - 8rem);
   margin: 0.625rem auto;
   max-width: 1080px;
   padding: 0rem 0.625rem;
