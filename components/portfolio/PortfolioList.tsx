@@ -16,7 +16,15 @@ const projects: Array<IProject> = [
         imgLight: '/images/markdown-preview-light.png',
         imgDark: '/images/markdown-preview-dark.png',
         features: []
+    },
+    {
+        url: '/portfolio/reduce-text',
+        title: '',
+        imgLight: '/images/reduce-light.png',
+        imgDark: '/images/reduce-dark.png',
+        features: []
     }
+
 ];
 
 const PortfolioList: FC = (): any => {
