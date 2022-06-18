@@ -44,14 +44,15 @@ const ReduceText: FC = () => {
 
     return (
         <Grid.Container gap={2} justify='center'>
-            <Grid xs={12} className={'font-pacifico'} justify='center'>
+            <Grid xs={12} className={'font-console'} justify='center'>
                 <Text
-                    h2 transform='uppercase' color='primary'>
+                    h2 transform='capitalize' color='primary'>
                     Reduce Text
                 </Text>
             </Grid>
             <Grid xs={12} sm={12} direction='column'>
                 <Textarea
+                    aria-labelledby="text-area"
                     onChange={onChangeTextarea}
                     color='primary'
                     rows={10}
@@ -64,7 +65,11 @@ const ReduceText: FC = () => {
                 <Spacer y={0.5} />
                 <Grid.Container gap={0.5}>
                     <Grid>
-                        <Button auto flat size="sm" onClick={() => reset()}>
+                        <Button
+                            aria-labelledby="reset"
+                            auto flat
+                            size="sm"
+                            onClick={() => reset()}>
                             Reset
                         </Button>
                     </Grid>

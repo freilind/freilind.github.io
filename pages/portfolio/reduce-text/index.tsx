@@ -9,8 +9,10 @@ const ReduceTextPage: NextPage = () => {
     const router = useRouter();
     return (
         <ProjectLayout title={'Reduce Text'} pageDescription={'Portfolio'}>
-
-            <Link block color="secondary" onClick={() => router.back()} >
+            <Link
+                aria-labelledby="go back"
+                block color="secondary"
+                onClick={() => router.back()} >
                 [ &lt;-- Go back ]
             </Link>
             <ReduceText />

@@ -1,20 +1,24 @@
 import React from 'react'
 import { NextPage } from 'next';
-import { PageLayout } from '../../../components/layouts';
+import { ProjectLayout } from '../../../components/layouts';
 import { useRouter } from 'next/router';
 import { Link } from "@nextui-org/react";
+import GithubSearch from '../../../projects/github-search/GithubSearch';
 
 const GithubUserSearchPage: NextPage = () => {
     const router = useRouter();
     return (
-        <PageLayout title={'Portfolio'} pageDescription={'Portfolio'}>
+        <ProjectLayout title={'Github search'} pageDescription={'Portfolio'}>
 
-            <Link block color="secondary" onClick={() => router.back()} >
+            <Link
+                aria-labelledby="go back"
+                block color="secondary"
+                onClick={() => router.back()} >
                 [ &lt;-- Go back ]
             </Link>
 
-            <div>index</div>
-        </PageLayout>
+            <GithubSearch />
+        </ProjectLayout>
     )
 }
 

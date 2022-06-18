@@ -20,7 +20,7 @@ const CollapsePage: FC = (): any => {
       <Grid>
         <Collapse.Group key={'collapse-group'} >
           <Collapse key={'collapse1'} title={title1} subtitle={subtitle1}>
-            <Grid.Container key={'collapse-container-1'} gap={10} justify="center" >
+            <Grid.Container key={'collapse-container-1'} gap={4} justify="center" >
               <PortfolioList />
             </Grid.Container>
           </Collapse>

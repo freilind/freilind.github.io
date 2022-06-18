@@ -3,5 +3,4 @@ export interface IProject {
     title: string;
     imgLight: string;
     imgDark: string;
-    features: string[]
 }
