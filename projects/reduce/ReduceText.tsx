@@ -75,7 +75,7 @@ const ReduceText: FC = () => {
                     </Grid>
                 </Grid.Container>
             </Grid>
-            <Grid xs={12} sm={3} direction='row'>
+            <Grid xs={12} sm={5} direction='row'>
                 <Container>
                     <Text h4>Character counter</Text>
                     <pre>
@@ -83,7 +83,7 @@ const ReduceText: FC = () => {
                     </pre>
                 </Container>
             </Grid>
-            <Grid xs={12} sm={3} direction='row'>
+            <Grid xs={12} sm={5} direction='row'>
                 <Container>
                     <Text h4>Words counter</Text>
                     <pre>

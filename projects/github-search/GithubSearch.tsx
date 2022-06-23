@@ -1,7 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Grid, Text, Input, Modal, Row } from '@nextui-org/react';
+import { Grid, Text, Input } from '@nextui-org/react';
 import GithubUser from './GithubUser';
 import { IGithubUser } from '../../interfaces/github-user';
+import ModalError from './Modal';
 
 const GithubSearch: FC = () => {
     const [query, setQuery] = useState('');
@@ -9,6 +10,8 @@ const GithubSearch: FC = () => {
     const [visible, setVisible] = useState(false);
     const [error, setError] = useState(Object);
     const [errorBody, setErrorBody] = useState(Object);
+
+    const onCloseModal = React.useCallback(() => setVisible(false), []);
 
     useEffect(() => {
         const timeOutId = setTimeout(() => search(), 500);
@@ -24,7 +27,6 @@ const GithubSearch: FC = () => {
                 if (response.ok) {
                     response.json().then(data => setResult(data.items));
                 } else {
-                    console.log(response);
                     response.json().then(setErrorBody);
                     setError(response);
                     setVisible(true);
@@ -37,35 +39,7 @@ const GithubSearch: FC = () => {
 
     return (
         <>
-            <Modal
-                color='error'
-                closeButton
-                blur
-                aria-labelledby="modal-title"
-                open={visible}
-                onClose={() => setVisible(false)}
-                css={{
-                    bg: '$red500',
-                }}
-            >
-                <Modal.Header>
-                    <Text id="modal-title" size={18} >
-                        Error
-                        <Text b size={18}>
-                            {`  ${error.status}`}
-                        </Text>
-                    </Text>
-                </Modal.Header>
-                <Modal.Body>
-                    <Row justify="space-between">
-                        <Text size={14}>
-                            {errorBody.message}
-                        </Text>
-                    </Row>
-                </Modal.Body>
-                <Modal.Footer>
-                </Modal.Footer>
-            </Modal>
+            <ModalError visible={visible} onClose={onCloseModal} error={error} errorBody={errorBody} />
 
             <Grid.Container gap={2} justify="center">
                 <Grid xs={12} className={'font-console'} justify='center'>
