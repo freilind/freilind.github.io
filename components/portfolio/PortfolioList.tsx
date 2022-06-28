@@ -7,8 +7,8 @@ const projects: Array<IProject> = [
     {
         url: '/portfolio/github-user-search',
         title: 'Github user search',
-        imgLight: 'images/github-search-light.png',
-        imgDark: 'images/github-search-dark.png',
+        imgLight: '/images/github-search-light.png',
+        imgDark: '/images/github-search-dark.png',
     },
     {
         url: '/portfolio/markdown',

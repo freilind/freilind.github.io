@@ -4,6 +4,7 @@ import { PortfolioList } from '../portfolio';
 import { ExperienceList } from '../experience';
 import Education from '../education/Education';
 import { useIntl } from 'react-intl';
+import { CourseList } from '../courses';
 
 const CollapsePage: FC = (): any => {
   const intl = useIntl();
@@ -14,6 +15,8 @@ const CollapsePage: FC = (): any => {
   const subtitle2 = intl.formatMessage({ id: "collapse.subtitle.2" });
   const title3 = intl.formatMessage({ id: "collapse.title.3" });
   const subtitle3 = intl.formatMessage({ id: "collapse.subtitle.3" });
+  const title4 = intl.formatMessage({ id: "collapse.title.4" });
+  const subtitle4 = intl.formatMessage({ id: "collapse.subtitle.4" });
 
   return (
     <Grid.Container gap={2}>
@@ -29,6 +32,11 @@ const CollapsePage: FC = (): any => {
               <ExperienceList />
             </Grid.Container>
           </Collapse>
+          <Collapse key={'collapse4'} title={title4} subtitle={subtitle4}>
+            <Grid.Container key={'collapse-container-4'} gap={4} justify="center" >
+              <CourseList />
+            </Grid.Container>
+          </Collapse>
           <Grid xs={0} sm={12} css={{
             padding: '$0'
           }}>
@@ -38,6 +46,7 @@ const CollapsePage: FC = (): any => {
               </Grid.Container>
             </Collapse>
           </Grid>
+          
         </Collapse.Group >
       </Grid>
     </Grid.Container>

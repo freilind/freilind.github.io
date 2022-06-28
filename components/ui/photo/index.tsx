@@ -1,13 +1,11 @@
 import React, { FC } from 'react';
-import Image from 'next/image';
-//import { Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 
 const Photo: FC = () => {
     return (
         <Image
-            layout='responsive'
             objectFit='fill'
-           // autoResize={true}
+            autoResize={true}
             className='img-rounded'
             width={250}
             height={250}
