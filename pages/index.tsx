@@ -8,7 +8,7 @@ import CollapsePage from '../components/collapse';
 const HomePage: NextPage = () => {
   return (
     <PageLayout title={'Portfolio'} pageDescription={'Portfolio'}>
-      <div className='home'>
+      <div role='home' className='home'>
         <Description />
         <Spacer />
         <Grid.Container xs={0} sm={1}>
@@ -17,7 +17,7 @@ const HomePage: NextPage = () => {
         </Grid.Container>
 
         <Grid.Container>
-          <Row justify='space-evenly' align="center">
+          <Row justify='space-evenly' align="center" role='row-skills'>
             <ListSkills />
           </Row>
         </Grid.Container>

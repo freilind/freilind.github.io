@@ -1,8 +1,8 @@
-import { Grid, Container, Spacer, Text, Link } from '@nextui-org/react'
-import { FC } from 'react'
-import { useIntl } from 'react-intl'
-import FlagImage from '../ui/flag'
-import Photo from '../ui/photo'
+import { FC } from 'react';
+import { Grid, Container, Spacer, Text, Link } from '@nextui-org/react';
+import { useIntl } from 'react-intl';
+import FlagImage from '../ui/flag';
+import Photo from '../ui/photo';
 
 const Description: FC = () => {
     const intl = useIntl();
@@ -21,18 +21,21 @@ const Description: FC = () => {
             <Grid xs={12} sm={9} direction='column'>
                 <Grid.Container >
                     <Grid xs={12} sm={9} className={'name'}>
-                        <Text h2 className={'font-raleway'} transform='uppercase' >
+                        <Text
+                            h2
+                            className={'font-raleway'}
+                            transform='uppercase' >
                             {name}
                         </Text>
                     </Grid>
-                    <Grid xs={12} sm={3} className={'rrss'} >
-                        <Link href="https://www.linkedin.com/in/freilind/" target={'_blank'}>
+                    <Grid xs={12} sm={3} className={'rrss'} role='rrss'>
+                        <Link href="https://www.linkedin.com/in/freilind/" target={'_blank'} role={'linkedin'}>
                             <i className={`bx bx-md bxl-linkedin-square`}></i>
                         </Link>
-                        <Link href="https://www.instagram.com/ftojoh/" target={'_blank'}>
+                        <Link href="https://www.instagram.com/ftojoh/" target={'_blank'} role={'instagram'}>
                             <i className={`bx bx-md bxl-instagram`}></i>
                         </Link>
-                        <Link href="#">
+                        <Link href="#" role={'gmail'}>
                             <i className={`bx bx-md bxl-gmail`}></i>
                         </Link>
                     </Grid>

@@ -29,7 +29,7 @@ const _app: FC<PropsWithChildren<AppProps>> = ({ Component, pageProps }) => {
       }}
     ><NextUIProvider>
         <IntlProvider locale={locale} messages={messages[locale]}>
-            <Component {...pageProps} />
+          <Component {...pageProps} />
         </IntlProvider>
       </NextUIProvider>
     </NextThemesProvider >
