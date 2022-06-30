@@ -4,4 +4,5 @@ export interface IIcon {
     size?: any;
     height?: any;
     width?: any;
+    label?: string;
 }

@@ -21,6 +21,12 @@ const projects: Array<IProject> = [
         title: 'Reduce text',
         imgLight: '/images/reduce-light.png',
         imgDark: '/images/reduce-dark.png'
+    },
+    {
+        url: '/portfolio/to-do',
+        title: 'Todo list',
+        imgLight: '/images/todo-light.png',
+        imgDark: '/images/todo-dark.png'
     }
 ];
 
