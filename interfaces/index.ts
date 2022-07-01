@@ -9,3 +9,5 @@ export * from './skill';
 export * from './flag';
 export * from './icon';
 export * from './flag-image';
+export * from './pokemon-full';
+export * from './pokemon-list';

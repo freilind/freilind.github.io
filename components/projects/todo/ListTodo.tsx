@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { Col, Row, Table, Tooltip, Text, Button } from '@nextui-org/react';
-import { StyledBadge } from '../../components/ui/badge/StyledBadge';
-import { DeleteIcon, TaskIcon, IconButton, CheckIcon } from '../../components/ui/icons';
-import { ITaskTodo } from '../../interfaces/task-todo';
+import { Col, Row, Table, Tooltip, Text } from '@nextui-org/react';
+import { StyledBadge } from '../../ui/badge/StyledBadge';
+import { DeleteIcon, TaskIcon, IconButton, CheckIcon } from '../../ui/icons';
+import { ITaskTodo } from '../../../interfaces/task-todo';
 
 interface IListTodoProps {
     tasks: ITaskTodo[];

@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import { Grid, Text, Input, useInput, Container } from '@nextui-org/react';
-import { ITaskTodo } from '../../interfaces/task-todo';
+import { ITaskTodo } from '../../../interfaces/task-todo';
 import short from 'short-uuid';
 import ListTodo from './ListTodo';
 

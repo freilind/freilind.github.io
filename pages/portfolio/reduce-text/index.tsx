@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { Link } from "@nextui-org/react";
 import { ProjectLayout } from '../../../components/layouts';
-import ReduceText from '../../../projects/reduce/ReduceText';
+import ReduceText from '../../../components/projects/reduce/ReduceText';
 
 const ReduceTextPage: NextPage = () => {
     const router = useRouter();

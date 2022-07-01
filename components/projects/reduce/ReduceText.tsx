@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, useCallback } from 'react';
 import { Button, Grid, Spacer, Text, Textarea, Container, FormElement } from '@nextui-org/react';
 
 interface IObject {
@@ -10,20 +10,7 @@ const ReduceText: FC = () => {
     const [resultChar, setResultChar] = useState({});
     const [resultWord, setResultWord] = useState({});
 
-    useEffect(() => {
-        reduceChar();
-        reduceWord();
-    }, [text]);
-
-    const reset = () => {
-        setText(initialText);
-    }
-
-    const onChangeTextarea = (event: React.ChangeEvent<FormElement>) => {
-        setText(event.target.value);
-    }
-
-    const reduce = (regex: string | RegExp) => {
+    const reduce = useCallback((regex: string | RegExp) => {
         return text.toLocaleUpperCase().split(regex).sort().reduce((prev: IObject, curr: string) => {
             if (prev[curr]) {
                 prev[curr] += 1;
@@ -32,14 +19,27 @@ const ReduceText: FC = () => {
             }
             return prev;
         }, {});
-    }
+    }, [text]);
 
-    const reduceChar = () => {
+    const reduceChar = useCallback(() => {
         setResultChar(reduce(''));
+    }, [reduce]);
+
+    const reduceWord = useCallback(() => {
+        setResultWord(reduce(/[ \n]/));
+    }, [reduce]);
+
+    useEffect(() => {
+        reduceChar();
+        reduceWord();
+    }, [reduceChar, reduceWord]);
+
+    const reset = () => {
+        setText(initialText);
     }
 
-    const reduceWord = () => {
-        setResultWord(reduce(/[ \n]/));
+    const onChangeTextarea = (event: React.ChangeEvent<FormElement>) => {
+        setText(event.target.value);
     }
 
     return (

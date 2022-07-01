@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { Link } from "@nextui-org/react";
 import { ProjectLayout } from '../../../components/layouts';
-import Markdown from '../../../projects/markdown/Markdown';
+import Markdown from '../../../components/projects/markdown/Markdown';
 
 const MarkdownPage: NextPage = () => {
     const router = useRouter();

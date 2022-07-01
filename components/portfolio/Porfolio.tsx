@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import NextLink from 'next/link';
-import { Grid, Card, Col, Spacer, Link, Text, useTheme } from '@nextui-org/react';
+import { Card, Col, Spacer, Link, Text, useTheme } from '@nextui-org/react';
 import { IProject } from '../../interfaces';
 
 interface ProjectProps {
     project: IProject;
 }
 
-const Project: FC<ProjectProps> = ({ project }) => {
+const Porfolio: FC<ProjectProps> = ({ project }) => {
     const { isDark } = useTheme();
     return (
         <NextLink href={project.url} passHref>
@@ -44,4 +44,4 @@ const Project: FC<ProjectProps> = ({ project }) => {
     )
 }
 
-export default Project;
+export default Porfolio;

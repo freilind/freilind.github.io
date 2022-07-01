@@ -1,7 +1,7 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, useCallback } from 'react';
 import { Grid, Text, Input } from '@nextui-org/react';
 import GithubUser from './GithubUser';
-import { IGithubUser } from '../../interfaces/github-user';
+import { IGithubUser } from '../../../interfaces/github-user';
 import ModalError from './Modal';
 
 const GithubSearch: FC = () => {
@@ -11,14 +11,9 @@ const GithubSearch: FC = () => {
     const [error, setError] = useState(Object);
     const [errorBody, setErrorBody] = useState(Object);
 
-    const onCloseModal = React.useCallback(() => setVisible(false), []);
+    const onCloseModal = useCallback(() => setVisible(false), []);
 
-    useEffect(() => {
-        const timeOutId = setTimeout(() => search(), 500);
-        return () => clearTimeout(timeOutId);
-    }, [query]);
-
-    const search = () => {
+    const search = useCallback(() => {
         if (!query) return;
         const url = `https://api.github.com/search/users?q=${query}&per_page=20`;
 
@@ -35,7 +30,12 @@ const GithubSearch: FC = () => {
                 setError({ status: 'fetching' });
                 setVisible(true);
             });
-    };
+    }, [query]);
+
+    useEffect(() => {
+        const timeOutId = setTimeout(() => search(), 500);
+        return () => clearTimeout(timeOutId);
+    }, [search]);
 
     return (
         <>

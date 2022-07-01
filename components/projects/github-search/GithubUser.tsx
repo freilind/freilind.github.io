@@ -1,6 +1,6 @@
 import { Grid, Link, Spacer, User } from '@nextui-org/react';
 import React, { FC } from 'react'
-import { IGithubUser } from '../../interfaces/github-user';
+import { IGithubUser } from '../../../interfaces/github-user';
 
 interface IGithubUserProps {
     user: IGithubUser;

@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { ProjectLayout } from '../../../components/layouts';
 import { useRouter } from 'next/router';
 import { Link } from "@nextui-org/react";
-import GithubSearch from '../../../projects/github-search/GithubSearch';
+import GithubSearch from '../../../components/projects/github-search/GithubSearch';
 
 const GithubUserSearchPage: NextPage = () => {
     const router = useRouter();

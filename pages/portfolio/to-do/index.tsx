@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { Link } from "@nextui-org/react";
 import { ProjectLayout } from '../../../components/layouts';
-import Todo from '../../../projects/todo/Todo';
+import Todo from '../../../components/projects/todo/Todo';
 
 const TodoPage: NextPage = () => {
     const router = useRouter();
