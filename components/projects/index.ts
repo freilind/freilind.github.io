@@ -30,5 +30,11 @@ export const projectsList: Array<IProject> = [
         title: 'Pokemón API',
         imgLight: '/images/pokemon-light.png',
         imgDark: '/images/pokemon-dark.png'
+    },
+    {
+        url: '/portfolio/fquiz',
+        title: 'Fquiz App',
+        imgLight: '/images/fquiz-light.png',
+        imgDark: '/images/fquiz-dark.png'
     }
 ];
