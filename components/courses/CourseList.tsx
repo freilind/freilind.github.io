@@ -26,6 +26,11 @@ export default CourseList;
 
 const courses: Array<ICourse> = [
     {
+        name: 'certificate-java8',
+        pathImage: '/images/courses/cert-java8.jpg',
+        url: '/images/courses/cert-java8.jpg'
+    },
+    {
         name: 'next-frmwk-prod',
         pathImage: '/images/courses/next-frmwk-prod.png',
         url: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-625fca48-56d0-499a-abd0-2e3299aeb3a0.pdf'
