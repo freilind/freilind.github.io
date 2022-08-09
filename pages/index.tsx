@@ -1,14 +1,14 @@
-import type { NextPage } from 'next';
-import { PageLayout } from '../components/layouts';
-import { Grid, Row, Spacer } from '@nextui-org/react';
-import Description from '../components/perfil/Description';
-import { ListSkills } from '../components/skills';
-import CollapsePage from '../components/collapse';
+import type { NextPage } from "next";
+import { PageLayout } from "../components/layouts";
+import { Grid, Row, Spacer } from "@nextui-org/react";
+import Description from "../components/perfil/Description";
+import { ListSkills } from "../components/skills";
+import Collapse from "../components/mycollapse";
 
 const HomePage: NextPage = () => {
   return (
-    <PageLayout title={'Portfolio'} pageDescription={'Portfolio'}>
-      <div role='home' className='home'>
+    <PageLayout title={"Portfolio"} pageDescription={"Portfolio"}>
+      <div role="home" className="home">
         <Description />
         <Spacer />
         <Grid.Container xs={0} sm={1}>
@@ -17,16 +17,15 @@ const HomePage: NextPage = () => {
         </Grid.Container>
 
         <Grid.Container>
-          <Row justify='space-evenly' align="center" role='row-skills'>
+          <Row justify="space-evenly" align="center" role="row-skills">
             <ListSkills />
           </Row>
         </Grid.Container>
       </div>
       <Spacer />
-      <CollapsePage />
+      <Collapse />
     </PageLayout>
-  )
-}
+  );
+};
 
 export default HomePage;
-
