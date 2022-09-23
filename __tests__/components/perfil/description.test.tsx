@@ -65,10 +65,10 @@ describe("Description component test", () => {
     expect(link).toHaveAttribute("href", "https://www.instagram.com/ftojoh/");
   });
 
-  it("exist link gmail", () => {
+  it("exist link github", () => {
     setup();
     const link = screen.getAllByRole("link")[2];
-    expect(link).toHaveAttribute("href", "#");
+    expect(link).toHaveAttribute("href", "https://github.com/freilind");
   });
 
   it("exist flags", () => {

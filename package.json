@@ -15,7 +15,7 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "@nextui-org/react": "^1.0.0-beta.7",
+    "@nextui-org/react": "^1.0.0-beta.10",
     "boxicons": "^2.1.2",
     "next": "12.1.6",
     "next-themes": "^0.2.0",

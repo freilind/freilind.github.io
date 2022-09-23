@@ -35,8 +35,8 @@ const Description: FC = () => {
             <Link href="https://www.instagram.com/ftojoh/" target={"_blank"}>
               <i className={`bx bx-md bxl-instagram`}></i>
             </Link>
-            <Link href="#">
-              <i className={`bx bx-md bxl-gmail`}></i>
+            <Link href="https://github.com/freilind" target={"_blank"}>
+              <i className={`bx bx-md bxl-github`}></i>
             </Link>
           </Grid>
         </Grid.Container>

@@ -64,10 +64,11 @@ exports[`Description snapshot renders description unchanged 1`] = `
           </a>
           <a
             class="nextui-c-gUrcXm nextui-c-gUrcXm-eAdznm-color-default nextui-c-gUrcXm-iFdQKc-animated-true"
-            href="#"
+            href="https://github.com/freilind"
+            target="_blank"
           >
             <i
-              class="bx bx-md bxl-gmail"
+              class="bx bx-md bxl-github"
             />
           </a>
         </div>
