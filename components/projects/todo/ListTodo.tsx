@@ -114,8 +114,8 @@ const ListTodo: FC<IListTodoProps> = ({ tasks, deleteTask, clompleteTask }) => {
       <Table.Body items={tasks}>
         {(item: ITaskTodo) => (
           <Table.Row>
-            {(columnKey: string) => (
-              <Table.Cell>{renderCell(item, columnKey)}</Table.Cell>
+            {(columnKey) => (
+              <Table.Cell>{renderCell(item, columnKey + "")}</Table.Cell>
             )}
           </Table.Row>
         )}

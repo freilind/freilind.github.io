@@ -38,8 +38,10 @@ const Education: FC = () => {
         <Table.Body items={educationList}>
           {(item: IItem) => (
             <Table.Row key={item.key} aria-labelledby={`row-${item.key}`}>
-              {(columnKey: string) => (
-                <Table.Cell aria-labelledby={`cell-${item[columnKey]}`}>
+              {(columnKey) => (
+                <Table.Cell
+                  aria-labelledby={`cell-${item.key}-${item[columnKey]}`}
+                >
                   {item[columnKey]}
                 </Table.Cell>
               )}
