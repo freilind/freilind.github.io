@@ -12,7 +12,7 @@ const Porfolio: FC<ProjectProps> = ({ project }) => {
   return (
     <NextLink href={project.url} passHref>
       <Link>
-        <Card cover bordered>
+        <Card variant="bordered">
           <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
             <Col>
               <Text h4 color="secondary"></Text>
@@ -20,9 +20,23 @@ const Porfolio: FC<ProjectProps> = ({ project }) => {
             </Col>
           </Card.Header>
 
-          {isDark && <Card.Image src={project.imgLight} width="100%" alt="" />}
+          {isDark && (
+            <Card.Image
+              objectFit="cover"
+              src={project.imgLight}
+              width="100%"
+              alt=""
+            />
+          )}
 
-          {!isDark && <Card.Image src={project.imgDark} width="100%" alt="" />}
+          {!isDark && (
+            <Card.Image
+              objectFit="cover"
+              src={project.imgDark}
+              width="100%"
+              alt=""
+            />
+          )}
         </Card>
       </Link>
     </NextLink>

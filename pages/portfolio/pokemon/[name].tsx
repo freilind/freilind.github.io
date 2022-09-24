@@ -32,7 +32,7 @@ const PokemonByNamePage: NextPage<IProps> = ({ pokemon }) => {
           </Text>
         </Grid>
         <Grid xs={12} sm={4}>
-          <Card hoverable css={{ padding: "30px" }}>
+          <Card isHoverable css={{ padding: "30px" }}>
             <Card.Body>
               <Card.Image
                 src={
